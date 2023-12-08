@@ -31,5 +31,9 @@ while True:
     if resultat == "Le mot de passe est sécurisé.":
         break  # Si le mot de passe est sécurisé, la boucle se termine
 
+# Cryptage du mot de passe avec SHA-256
+h = hashlib.sha256(mot_de_passe.encode())  # Crée un objet de hachage SHA-256 et alimente cet objet avec le mot de passe
+mot_de_passe_crypte = h.hexdigest()  # Obtient le condensat du mot de passe
+print("Votre mot de passe crypté est : ", mot_de_passe_crypte)  # Imprime le mot de passe crypté
 
 #Lucas Bendia
